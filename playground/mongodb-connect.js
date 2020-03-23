@@ -19,14 +19,14 @@ client.connect(function (err) {
 
     const db = client.db(dbName);
 
-    // db.collection('Todos').insertOne({
-    //     text: 'something to do',
-    //     completed: false,
-    // }, (err, result) => {
-    //     console.log('in here');
-    //     if(err) throw err;
-    //     console.log(JSON.stringify(result.ops, undefined, 2));
-    // });
+    db.collection('Todos').insertOne({
+        text: 'something to do',
+        completed: false,
+    }, (err, result) => {
+        console.log('in here');
+        if(err) throw err;
+        console.log(JSON.stringify(result.ops, undefined, 2));
+    });
 
     // db.collection('Users').insertOne({
     //     name: 'Mitchel',
