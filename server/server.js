@@ -68,17 +68,17 @@ app.get('/todos/:id', (req, res) => {
 
 
 // GET documents by req.body endpoint
-// app.get('/todo', (req, res) => {
-//     Todo.find(req.body).then((todo) => {
+app.get('/todo', (req, res) => {
+    Todo.find(req.body).then((todo) => {
 
-//         if (!req.body) {
-//             return res.status(400).send({ msg: "No query was specified" });
-//         }
-//         res.send({todo});
-//     }, (err) => {
-//         res.status(400).send({ msg: "There was an error" });
-//     });
-// }); 
+        if (!req.body) {
+            return res.status(400).send({ msg: "No query was specified" });
+        }
+        res.send({todo});
+    }, (err) => {
+        res.status(400).send({ msg: "There was an error" });
+    });
+}); 
 
 
 app.listen(port, () => {
