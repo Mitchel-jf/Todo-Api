@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
 
+//this is similar to creating a class model in Dart
 var Todo = mongoose.model('Todo', {
     text: {
         type: String,
@@ -17,4 +18,4 @@ var Todo = mongoose.model('Todo', {
     }
 }, 'Todos');
 
-module.exports = {Todo};
+module.exports = { Todo };
